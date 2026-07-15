@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Humanfia builds practical, human-centered tools for AI-assisted software development. Explore oh-my-humanize and Humanize."
+    />
+    <meta name="author" content="Humanfia" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#fbfaf7" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Humanfia" />
+    <meta property="og:title" content="Humanfia — Human-centered AI development" />
+    <meta
+      property="og:description"
+      content="Open-source tools for workflow-native terminal coding and independent AI code review."
+    />
+    <meta property="og:url" content="https://humanfia.github.io/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Humanfia — Human-centered AI development" />
+    <meta
+      name="twitter:description"
+      content="Open-source tools for workflow-native terminal coding and independent AI code review."
+    />
+    <title>Humanfia — Human-centered AI development</title>
+    <link rel="canonical" href="https://humanfia.github.io/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Humanfia",
+        "url": "https://humanfia.github.io/",
+        "sameAs": [
+          "https://github.com/humanfia",
+          "https://github.com/humanfia/oh-my-humanize",
+          "https://github.com/PolyArch/humanize"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper nav-shell">
+        <a class="brand" href="#top" aria-label="Humanfia home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>humanfia</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#projects">Projects</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#principles">Principles</a>
+          <a href="https://github.com/humanfia" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+        <a class="nav-cta" href="https://github.com/humanfia/oh-my-humanize" target="_blank" rel="noreferrer">
+          View on GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero wrapper">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Open-source developer tools</p>
+          <h1>Build with agents.<br /><em>Keep it human.</em></h1>
+          <p class="hero-lede">
+            A pair of open-source projects for serious AI-assisted development:
+            a workflow-native terminal agent, and a disciplined build-review loop.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#projects">Explore the projects <span>↓</span></a>
+            <a class="text-link" href="https://github.com/humanfia" target="_blank" rel="noreferrer">Follow development <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-system reveal" aria-label="Humanfia project system diagram">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="system-node node-build">
+            <span class="node-index">01</span>
+            <strong>oh-my-humanize</strong>
+            <small>build &amp; orchestrate</small>
+          </div>
+          <div class="system-core">
+            <div class="core-pulse"></div>
+            <span>H</span>
+          </div>
+          <div class="system-node node-review">
+            <span class="node-index">02</span>
+            <strong>Humanize</strong>
+            <small>review &amp; refine</small>
+          </div>
+          <svg class="system-line" viewBox="0 0 560 450" role="presentation" aria-hidden="true">
+            <path d="M135 150 C230 105, 215 225, 280 225 S340 335, 440 290" />
+            <circle cx="135" cy="150" r="4" />
+            <circle cx="440" cy="290" r="4" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="signal-strip" aria-label="Project highlights">
+        <div class="wrapper signal-grid">
+          <div><strong>40+</strong><span>model providers</span></div>
+          <div><strong>32</strong><span>built-in tools</span></div>
+          <div><strong>20</strong><span>native capabilities</span></div>
+          <div><strong>∞</strong><span>feedback loops</span></div>
+        </div>
+      </section>
+
+      <section class="projects section wrapper" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> Two complementary projects</p>
+          <h2>From first prompt<br />to final review.</h2>
+          <p>Use them independently, or together as a complete agentic development system.</p>
+        </div>
+
+        <article class="project-card project-primary reveal">
+          <div class="project-main">
+            <div class="project-meta">
+              <span class="project-number">01</span>
+              <span class="project-status"><i></i> Rust core</span>
+            </div>
+            <h3>oh-my-<br /><em>humanize</em></h3>
+            <p class="project-tagline">A terminal agent that is workflow-native by design.</p>
+            <p class="project-description">
+              Code execution, LSP, debugging, subagents, browser control, GitHub as a filesystem,
+              review, memory, and dozens of model providers—all in one native harness.
+            </p>
+            <div class="project-actions">
+              <a class="button button-dark" href="https://github.com/humanfia/oh-my-humanize" target="_blank" rel="noreferrer">Open repository <span>↗</span></a>
+              <button class="copy-command" type="button" data-copy="curl -fsSL https://raw.githubusercontent.com/humanfia/oh-my-humanize/main/scripts/install.sh | sh" aria-label="Copy install command">
+                <code>curl -fsSL …/install.sh | sh</code><span>Copy</span>
+              </button>
+            </div>
+          </div>
+          <div class="terminal-window" aria-label="Example oh-my-humanize terminal session">
+            <div class="terminal-bar">
+              <div><i></i><i></i><i></i></div>
+              <span>humanfia / terminal</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">❯</span> <span class="command">omh</span></p>
+              <p class="muted">session initialized · provider ready</p>
+              <p>&nbsp;</p>
+              <p><span class="label">you</span> implement the auth flow, then review it</p>
+              <p>&nbsp;</p>
+              <p><span class="label accent">agent</span> I’ll inspect the repository first.</p>
+              <p class="tool"><span>→</span> search <b>src/**</b></p>
+              <p class="tool"><span>→</span> read <b>src/auth.ts</b></p>
+              <p class="tool success"><span>✓</span> lsp <b>0 diagnostics</b></p>
+              <p class="tool"><span>→</span> review <b>working tree</b></p>
+              <p>&nbsp;</p>
+              <p class="muted">Workflow complete in 4m 12s</p>
+              <span class="cursor"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-secondary reveal">
+          <div class="project-main">
+            <div class="project-meta">
+              <span class="project-number">02</span>
+              <span class="project-status"><i></i> Claude Code plugin</span>
+            </div>
+            <h3>Humanize</h3>
+            <p class="project-tagline">Iterative development with independent AI review.</p>
+            <p class="project-description">
+              Claude implements. Codex reviews. Humanize keeps the loop moving until the plan is
+              satisfied—without taking architecture and intent away from the human.
+            </p>
+            <div class="project-actions">
+              <a class="button button-light" href="https://github.com/PolyArch/humanize" target="_blank" rel="noreferrer">Open repository <span>↗</span></a>
+              <button class="copy-command copy-command-light" type="button" data-copy="/plugin install humanize@PolyArch" aria-label="Copy install command">
+                <code>/plugin install humanize@PolyArch</code><span>Copy</span>
+              </button>
+            </div>
+          </div>
+          <div class="loop-visual" aria-label="Humanize RLCR workflow">
+            <div class="loop-center">
+              <span>RLCR</span>
+              <small>human-led</small>
+            </div>
+            <div class="loop-step step-plan"><span>01</span><strong>Plan</strong><small>define intent</small></div>
+            <div class="loop-step step-build"><span>02</span><strong>Build</strong><small>Claude implements</small></div>
+            <div class="loop-step step-review"><span>03</span><strong>Review</strong><small>Codex inspects</small></div>
+            <div class="loop-step step-refine"><span>04</span><strong>Refine</strong><small>issues feed back</small></div>
+            <svg viewBox="0 0 520 400" role="presentation" aria-hidden="true">
+              <path d="M135 104 C265 20, 415 80, 420 205 C425 330, 270 386, 140 304 C30 235, 35 155, 135 104Z" />
+              <path class="loop-inner" d="M185 144 C270 90, 350 132, 350 212 C350 286, 260 318, 185 270 C120 228, 125 180, 185 144Z" />
+            </svg>
+          </div>
+        </article>
+      </section>
+
+      <section class="workflow-section section" id="workflow">
+        <div class="wrapper">
+          <div class="section-heading compact reveal">
+            <p class="eyebrow"><span></span> The combined workflow</p>
+            <h2>More leverage.<br />Fewer blind spots.</h2>
+          </div>
+          <div class="workflow-grid">
+            <article class="workflow-item reveal">
+              <span>01</span><div class="workflow-icon">✦</div><h3>Shape the idea</h3>
+              <p>Turn a rough thought into an explicit plan with acceptance criteria.</p>
+            </article>
+            <article class="workflow-item reveal">
+              <span>02</span><div class="workflow-icon">⌘</div><h3>Execute with tools</h3>
+              <p>Let the agent search, edit, run, debug, browse, and coordinate.</p>
+            </article>
+            <article class="workflow-item reveal">
+              <span>03</span><div class="workflow-icon">◎</div><h3>Review independently</h3>
+              <p>Use a separate model to find correctness, quality, and design issues.</p>
+            </article>
+            <article class="workflow-item reveal">
+              <span>04</span><div class="workflow-icon">↻</div><h3>Refine to done</h3>
+              <p>Feed findings back into implementation until the contract is met.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="principles section wrapper" id="principles">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> Design principles</p>
+          <h2>Automation without<br />abdication.</h2>
+        </div>
+        <div class="principles-grid">
+          <article class="principle reveal">
+            <span class="principle-index">A</span>
+            <h3>Human architecture</h3>
+            <p>The user owns the intent, tradeoffs, and definition of done. Agents accelerate the path.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle-index">B</span>
+            <h3>Iteration over perfection</h3>
+            <p>Fast feedback catches mistakes earlier than a heroic one-shot prompt ever will.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle-index">C</span>
+            <h3>Independent review</h3>
+            <p>The model that built the change should not be the only model judging the change.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="wrapper cta-inner reveal">
+          <p class="eyebrow"><span></span> Start building</p>
+          <h2>Give your agents<br /><em>a better system.</em></h2>
+          <div class="cta-actions">
+            <a class="button button-dark" href="https://github.com/humanfia/oh-my-humanize" target="_blank" rel="noreferrer">Try oh-my-humanize <span>↗</span></a>
+            <a class="button button-outline" href="https://github.com/PolyArch/humanize" target="_blank" rel="noreferrer">Try Humanize <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper footer-grid">
+        <div>
+          <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>humanfia</span></a>
+          <p>Human-centered tools for agentic software development.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Projects</strong>
+          <a href="https://github.com/humanfia/oh-my-humanize" target="_blank" rel="noreferrer">oh-my-humanize ↗</a>
+          <a href="https://github.com/PolyArch/humanize" target="_blank" rel="noreferrer">Humanize ↗</a>
+        </div>
+        <div class="footer-links">
+          <strong>Connect</strong>
+          <a href="https://github.com/humanfia" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://github.com/PolyArch" target="_blank" rel="noreferrer">PolyArch ↗</a>
+        </div>
+      </div>
+      <div class="wrapper footer-bottom">
+        <span>Open source, built in public.</span>
+        <span>© <span id="year"></span> Humanfia</span>
+      </div>
+    </footer>
+  </body>
+</html>
