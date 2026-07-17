@@ -17,7 +17,7 @@
       property="og:description"
       content="Open-source tools for workflow-native terminal coding and independent AI code review."
     />
-    <meta property="og:url" content="https://humanfia.github.io/" />
+    <meta property="og:url" content="https://humanfia.ai/" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Humanfia — Human-centered AI development" />
     <meta
@@ -25,7 +25,7 @@
       content="Open-source tools for workflow-native terminal coding and independent AI code review."
     />
     <title>Humanfia — Human-centered AI development</title>
-    <link rel="canonical" href="https://humanfia.github.io/" />
+    <link rel="canonical" href="https://humanfia.ai/" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/script.js" defer></script>
@@ -34,7 +34,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Humanfia",
-        "url": "https://humanfia.github.io/",
+        "url": "https://humanfia.ai/",
         "sameAs": [
           "https://github.com/humanfia",
           "https://github.com/humanfia/oh-my-humanize",
@@ -48,13 +48,13 @@
       <div class="wrapper nav-shell">
         <a class="brand" href="#top" aria-label="Humanfia home">
           <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span>humanfia</span>
+          <span>humanfia: AI flows with you</span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="#projects">Projects</a>
           <a href="#workflow">Workflow</a>
           <a href="#principles">Principles</a>
-          <a href="https://github.com/humanfia" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="/blog/">Blog</a>
         </nav>
         <a class="nav-cta" href="https://github.com/humanfia/oh-my-humanize" target="_blank" rel="noreferrer">
           View on GitHub <span aria-hidden="true">↗</span>
@@ -65,11 +65,11 @@
     <main id="top">
       <section class="hero wrapper">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span></span> Open-source developer tools</p>
-          <h1>Build with agents.<br /><em>Keep it human.</em></h1>
+          <p class="eyebrow"><span></span> Open-source agent flow framework</p>
+          <h1>Build with agents,<br /><em>in a <span class="humanized-word">humanized</span> way</em></h1>
           <p class="hero-lede">
-            A pair of open-source projects for serious AI-assisted development:
-            a workflow-native terminal agent, and a disciplined build-review loop.
+            Open source agent workflow to serious L3~L4 development: a careful human-agent
+            alignment, a workflow-native terminal agent, and a disciplined build-review loop.
           </p>
           <div class="hero-actions">
             <a class="button button-dark" href="#projects">Explore the projects <span>↓</span></a>
@@ -82,7 +82,7 @@
           <div class="orbit orbit-two"></div>
           <div class="system-node node-build">
             <span class="node-index">01</span>
-            <strong>oh-my-humanize</strong>
+            <strong>Oh-My-Humanize &amp; Humanize</strong>
             <small>build &amp; orchestrate</small>
           </div>
           <div class="system-core">
@@ -91,13 +91,33 @@
           </div>
           <div class="system-node node-review">
             <span class="node-index">02</span>
-            <strong>Humanize</strong>
-            <small>review &amp; refine</small>
+            <strong>KDA: Kernel Design Agents</strong>
+            <small>Produce SOL Kernel Massively</small>
           </div>
-          <svg class="system-line" viewBox="0 0 560 450" role="presentation" aria-hidden="true">
-            <path d="M135 150 C230 105, 215 225, 280 225 S340 335, 440 290" />
-            <circle cx="135" cy="150" r="4" />
-            <circle cx="440" cy="290" r="4" />
+          <div class="system-node node-quantization">
+            <span class="node-index">03</span>
+            <strong>QDA: Quantization Design Agents</strong>
+            <small>Low bit converting with a click button solution</small>
+          </div>
+          <div class="system-node node-olympic">
+            <span class="node-index">04</span>
+            <strong>HOA: Humanize Olympic Agents</strong>
+            <small>Mastering olympic contest with agent flow</small>
+          </div>
+          <svg class="system-line" viewBox="0 0 560 540" role="presentation" aria-hidden="true">
+            <defs>
+              <marker id="flow-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L8 4 L0 8 Z" />
+              </marker>
+            </defs>
+            <path class="foundation-line" marker-end="url(#flow-arrow)" d="M105 270 C165 270, 190 270, 228 270" />
+            <path marker-end="url(#flow-arrow)" d="M322 270 C365 270, 365 88, 420 88" />
+            <path marker-end="url(#flow-arrow)" d="M322 270 C375 270, 380 270, 420 270" />
+            <path marker-end="url(#flow-arrow)" d="M322 270 C365 270, 365 452, 420 452" />
+            <circle class="foundation-point" cx="105" cy="270" r="5" />
+            <circle cx="430" cy="88" r="4" />
+            <circle cx="430" cy="270" r="4" />
+            <circle cx="430" cy="452" r="4" />
           </svg>
         </div>
       </section>
@@ -113,12 +133,22 @@
 
       <section class="projects section wrapper" id="projects">
         <div class="section-heading reveal">
-          <p class="eyebrow"><span></span> Two complementary projects</p>
-          <h2>From first prompt<br />to final review.</h2>
+          <p class="eyebrow"><span></span> From Automated Idea Factory to Realization</p>
+          <h2>From first idea<br />to final implementation.</h2>
           <p>Use them independently, or together as a complete agentic development system.</p>
         </div>
 
-        <article class="project-card project-primary reveal">
+        <div class="project-carousel reveal" data-carousel aria-roledescription="carousel" aria-label="Humanfia projects">
+          <div class="carousel-controls">
+            <p><span data-carousel-current>01</span> / <span>02</span></p>
+            <div>
+              <button type="button" data-carousel-prev aria-label="Show previous project">←</button>
+              <button type="button" data-carousel-next aria-label="Show next project">→</button>
+            </div>
+          </div>
+          <div class="carousel-viewport">
+            <div class="carousel-track" data-carousel-track>
+        <article class="project-card project-primary" data-carousel-slide aria-roledescription="slide" aria-label="1 of 2">
           <div class="project-main">
             <div class="project-meta">
               <span class="project-number">01</span>
@@ -160,7 +190,7 @@
           </div>
         </article>
 
-        <article class="project-card project-secondary reveal">
+        <article class="project-card project-secondary" data-carousel-slide aria-roledescription="slide" aria-label="2 of 2">
           <div class="project-main">
             <div class="project-meta">
               <span class="project-number">02</span>
@@ -194,6 +224,9 @@
             </svg>
           </div>
         </article>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="workflow-section section" id="workflow">
@@ -241,8 +274,8 @@
           </article>
           <article class="principle reveal">
             <span class="principle-index">C</span>
-            <h3>Independent review</h3>
-            <p>The model that built the change should not be the only model judging the change.</p>
+            <h3>Model peer-review</h3>
+            <p>The model that built the code should not be the only model judging the change. In Humanize, we recommend Claude for builder and Codex for reviewer.</p>
           </article>
         </div>
       </section>
@@ -250,7 +283,7 @@
       <section class="cta-section">
         <div class="wrapper cta-inner reveal">
           <p class="eyebrow"><span></span> Start building</p>
-          <h2>Give your agents<br /><em>a better system.</em></h2>
+          <h2>Give your agents<br /><em>a better workflow.</em></h2>
           <div class="cta-actions">
             <a class="button button-dark" href="https://github.com/humanfia/oh-my-humanize" target="_blank" rel="noreferrer">Try oh-my-humanize <span>↗</span></a>
             <a class="button button-outline" href="https://github.com/PolyArch/humanize" target="_blank" rel="noreferrer">Try Humanize <span>↗</span></a>
@@ -269,11 +302,13 @@
           <strong>Projects</strong>
           <a href="https://github.com/humanfia/oh-my-humanize" target="_blank" rel="noreferrer">oh-my-humanize ↗</a>
           <a href="https://github.com/PolyArch/humanize" target="_blank" rel="noreferrer">Humanize ↗</a>
+          <a href="https://github.com/mit-han-lab/kernel-design-agents/" target="_blank" rel="noreferrer">Kernel Design Agents ↗</a>
         </div>
         <div class="footer-links">
           <strong>Connect</strong>
-          <a href="https://github.com/humanfia" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://research.nvidia.com/home" target="_blank" rel="noreferrer">NVIDIA Research ↗</a>
           <a href="https://github.com/PolyArch" target="_blank" rel="noreferrer">PolyArch ↗</a>
+          <a href="https://hanlab.mit.edu/" target="_blank" rel="noreferrer">MIT-HAN-LAB ↗</a>
         </div>
       </div>
       <div class="wrapper footer-bottom">

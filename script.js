@@ -36,4 +36,46 @@ document.querySelectorAll('[data-copy]').forEach((button) => {
   });
 });
 
+document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+  const track = carousel.querySelector('[data-carousel-track]');
+  const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]'));
+  const previousButton = carousel.querySelector('[data-carousel-prev]');
+  const nextButton = carousel.querySelector('[data-carousel-next]');
+  const currentLabel = carousel.querySelector('[data-carousel-current]');
+  let currentIndex = 0;
+  let touchStartX = 0;
+
+  const showSlide = (nextIndex) => {
+    currentIndex = (nextIndex + slides.length) % slides.length;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    currentLabel.textContent = String(currentIndex + 1).padStart(2, '0');
+
+    slides.forEach((slide, index) => {
+      const active = index === currentIndex;
+      slide.setAttribute('aria-hidden', String(!active));
+      if ('inert' in slide) slide.inert = !active;
+    });
+  };
+
+  previousButton.addEventListener('click', () => showSlide(currentIndex - 1));
+  nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
+
+  carousel.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') showSlide(currentIndex - 1);
+    if (event.key === 'ArrowRight') showSlide(currentIndex + 1);
+  });
+
+  carousel.addEventListener('touchstart', (event) => {
+    touchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (event) => {
+    const distance = event.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(distance) < 45) return;
+    showSlide(currentIndex + (distance < 0 ? 1 : -1));
+  }, { passive: true });
+
+  showSlide(0);
+});
+
 document.querySelector('#year').textContent = new Date().getFullYear();

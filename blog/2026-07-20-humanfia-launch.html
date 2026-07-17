@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Introducing Humanfia: an open-source agent workflow for serious L3–L4 development, from idea formation to final implementation." />
+    <meta name="author" content="Humanfia" />
+    <meta name="theme-color" content="#fbfaf7" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Humanfia" />
+    <meta property="og:title" content="Humanfia: From Automated Idea Factory to Realization" />
+    <meta property="og:description" content="An open-source agent workflow for serious L3–L4 development." />
+    <meta property="og:url" content="https://humanfia.ai/blog/2026-07-20-humanfia-launch.html" />
+    <meta property="article:published_time" content="2026-07-20T00:00:00+08:00" />
+    <meta name="twitter:card" content="summary" />
+    <title>Humanfia: From Automated Idea Factory to Realization</title>
+    <link rel="canonical" href="https://humanfia.ai/blog/2026-07-20-humanfia-launch.html" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Humanfia: From Automated Idea Factory to Realization",
+        "description": "An open-source agent workflow for serious L3–L4 development.",
+        "datePublished": "2026-07-20T00:00:00+08:00",
+        "dateModified": "2026-07-20T00:00:00+08:00",
+        "author": { "@type": "Organization", "name": "Humanfia" },
+        "publisher": { "@type": "Organization", "name": "Humanfia", "url": "https://humanfia.ai/" },
+        "mainEntityOfPage": "https://humanfia.ai/blog/2026-07-20-humanfia-launch.html"
+      }
+    </script>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper nav-shell">
+        <a class="brand" href="/" aria-label="Humanfia home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>humanfia: AI flows with you</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/#projects">Projects</a>
+          <a href="/#workflow">Workflow</a>
+          <a href="/#principles">Principles</a>
+          <a class="active" href="/blog/">Blog</a>
+        </nav>
+        <a class="nav-cta" href="https://github.com/humanfia/oh-my-humanize" target="_blank" rel="noreferrer">
+          View on GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="article-main">
+      <article class="article wrapper">
+        <header class="article-header reveal">
+          <a class="back-link" href="/blog/">← All posts</a>
+          <p class="article-kicker">Launch · Human-agent workflows</p>
+          <h1>Humanfia: From Automated Idea Factory to <em>Realization</em></h1>
+          <div class="article-meta">
+            <time datetime="2026-07-20">July 20, 2026</time>
+            <span>Humanfia</span>
+            <span>6 min read</span>
+          </div>
+        </header>
+
+        <div class="article-body reveal">
+          <p class="article-lede">Software agents are becoming capable enough to do more than complete isolated coding tasks. The next challenge is not simply stronger models—it is building a workflow that can carry an idea through architecture, implementation, independent review, and refinement without losing human intent.</p>
+
+          <p>Today we are introducing <strong>Humanfia</strong>, an open-source effort focused on agent workflows for serious L3–L4 software development. Humanfia connects careful human-agent alignment, a workflow-native terminal agent, and a disciplined build-review loop.</p>
+
+          <blockquote>
+            <p>Build with agents, in a humanized way</p>
+          </blockquote>
+
+          <h2>Why workflows matter</h2>
+          <p>A capable model can write a function. A capable development system must do much more: understand a repository, preserve constraints, use the right tools, validate its work, incorporate external review, and continue until the actual acceptance criteria are met.</p>
+          <p>That system should not remove the human from the process. The human remains the architect: defining intent, evaluating tradeoffs, and deciding what “done” means. Agents provide execution leverage inside that contract.</p>
+
+          <h2>From first idea to final implementation</h2>
+          <p>Our intended workflow has four stages:</p>
+          <ol>
+            <li><strong>Shape the idea.</strong> Expand a rough direction into an explicit plan with constraints and acceptance criteria.</li>
+            <li><strong>Execute with tools.</strong> Search, edit, run, debug, browse, and coordinate through a workflow-native terminal environment.</li>
+            <li><strong>Review independently.</strong> Ask a second model to judge correctness, quality, and design rather than letting the builder grade itself.</li>
+            <li><strong>Refine to done.</strong> Feed findings back into implementation until the plan’s contract is satisfied.</li>
+          </ol>
+
+          <h2>Two open-source foundations</h2>
+          <p><a href="https://github.com/humanfia/oh-my-humanize"><strong>Oh-My-Humanize</strong></a> is the execution environment: a workflow-native terminal coding agent with code intelligence, debugging, subagents, browser control, review, memory, and broad model support.</p>
+          <p><a href="https://github.com/PolyArch/humanize"><strong>Humanize</strong></a> supplies the disciplined feedback loop. Claude implements, Codex independently reviews, and review findings cycle back into implementation. The human stays responsible for the plan and the final decision.</p>
+
+          <aside class="article-callout">
+            <span>Model peer-review</span>
+            <p>The model that built the code should not be the only model judging the change. In Humanize, we recommend Claude for builder and Codex for reviewer.</p>
+          </aside>
+
+          <h2>Beyond general software: Kernel Design Agents</h2>
+          <p>The same workflow architecture can be specialized for high-value domains. KDA—Kernel Design Agents—applies iterative generation, benchmarking, review, and refinement to produce optimized SOL kernels at scale.</p>
+          <p>This is where agent workflows become more than coding assistance. They become repeatable production systems: capable of exploring many candidate implementations while preserving measurement, correctness checks, and human oversight.</p>
+
+          <h2>What comes next</h2>
+          <p>We will continue improving the workflow primitives, strengthening model peer-review, and publishing what we learn from long-running development tasks. The projects are open source, and we welcome builders who believe the future of software development should be both more automated and more intentional.</p>
+          <p>The goal is not to hand software development over to agents. The goal is to give agents a better workflow—and give humans a better way to direct them.</p>
+
+          <div class="article-links">
+            <a href="https://github.com/humanfia/oh-my-humanize" target="_blank" rel="noreferrer">Explore Oh-My-Humanize <span>↗</span></a>
+            <a href="https://github.com/PolyArch/humanize" target="_blank" rel="noreferrer">Explore Humanize <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper footer-grid">
+        <div>
+          <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>humanfia</span></a>
+          <p>Human-centered tools for agentic software development.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Projects</strong>
+          <a href="https://github.com/humanfia/oh-my-humanize" target="_blank" rel="noreferrer">oh-my-humanize ↗</a>
+          <a href="https://github.com/PolyArch/humanize" target="_blank" rel="noreferrer">Humanize ↗</a>
+          <a href="https://github.com/mit-han-lab/kernel-design-agents/" target="_blank" rel="noreferrer">Kernel Design Agents ↗</a>
+        </div>
+        <div class="footer-links">
+          <strong>Connect</strong>
+          <a href="https://research.nvidia.com/home" target="_blank" rel="noreferrer">NVIDIA Research ↗</a>
+          <a href="https://github.com/PolyArch" target="_blank" rel="noreferrer">PolyArch ↗</a>
+          <a href="https://hanlab.mit.edu/" target="_blank" rel="noreferrer">MIT-HAN-LAB ↗</a>
+        </div>
+      </div>
+      <div class="wrapper footer-bottom">
+        <span>Open source, built in public.</span>
+        <span>© <span id="year"></span> Humanfia</span>
+      </div>
+    </footer>
+  </body>
+</html>

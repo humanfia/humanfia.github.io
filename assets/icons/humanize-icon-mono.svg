@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Humanize</title>
+  <desc id="desc">A monochrome sharp geometric H built from two opposing iterative arrows.</desc>
+  <g fill="currentColor">
+    <path d="M120 112h52v288h-52z"/>
+    <path d="M340 112h52v288h-52z"/>
+    <path d="M146 194h150v-32l62 58-62 58v-32H146z"/>
+    <path d="M366 266H216v-32l-62 58 62 58v-32h150z"/>
+  </g>
+</svg>

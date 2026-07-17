@@ -18,5 +18,8 @@ Open `http://localhost:4173`.
 Pushes to `main` deploy automatically to GitHub Pages using
 `.github/workflows/deploy.yml`.
 
+The repository includes a `CNAME` file for the custom domain
+`https://humanfia.ai`.
+
 In the repository settings, choose **GitHub Actions** as the Pages source under
 **Settings → Pages → Build and deployment**.
