@@ -48,7 +48,7 @@ number here is Humanfia-reported.</Sidenote>
 ## Prefill
 
 The MSA prefill indexer was badly underusing the hardware during long-context serving on B300.
-[KDA](/projects/kda) found it and rewrote around it: **6.5×** as a geometric mean across the
+[KDA](/kda/) found it and rewrote around it: **6.5×** as a geometric mean across the
 workloads tested, **up to 14×** on the end-of-prefill chunk tails, where the underuse was
 worst and the shape least convenient, and **no regression** anywhere in the set.
 
@@ -117,4 +117,4 @@ just as happily as one that is faster because it is better.
   <text class="accent" x="320" y="190" data-step="3">■ faster, identical</text>
 </AnimatedDiagram>
 
-[KDA](/projects/kda) · [NVlabs/kda](https://github.com/NVlabs/kda)
+[KDA](/kda/) · [NVlabs/kda](https://github.com/NVlabs/kda)

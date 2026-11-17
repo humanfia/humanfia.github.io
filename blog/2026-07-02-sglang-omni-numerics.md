@@ -168,4 +168,4 @@ Where a deviation genuinely is worth having, it should be something the caller a
 is what the [quality tier](/blog/2026-08-06-sglang-diffusion-quality-tiers) turned into a
 month later.
 
-[KDA](/projects/kda) · [KDA-Pilot](https://github.com/BBuf/KDA-Pilot)
+[KDA](/kda/) · [KDA-Pilot](https://github.com/BBuf/KDA-Pilot)

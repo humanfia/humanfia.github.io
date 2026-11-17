@@ -42,7 +42,7 @@ ablation:
   - { label: + ncu-report-skill, detail: + profiler, values: { s: 8.58 } }
 ---
 
-Kernels designed with [KDA](/projects/kda) took a podium place on **every track** of the
+Kernels designed with [KDA](/kda/) took a podium place on **every track** of the
 MLSys 2026 FlashInfer kernel contest, in the Full-Agent division, where no human writes kernel
 code: **first on MoE, second on DSA, third on GDN**. The team entered as HAN Lab Kernel Mafia.
 
@@ -218,4 +218,4 @@ The kernels, the prompts and the report are published.
 
 [The contest kernels](https://github.com/mit-han-lab/mlsys2026-flashinfer-contest-solution) ·
 [prompts and report](https://github.com/mit-han-lab/mlsys2026-flashinfer-contest) ·
-[the results](https://mlsys26.flashinfer.ai/) · [KDA](/projects/kda)
+[the results](https://mlsys26.flashinfer.ai/) · [KDA](/kda/)

@@ -14,4 +14,4 @@ word for word for another try.
 
 <FlowPlayer flow="aot" />
 
-See also: [Writing a flow](https://docs.humanfia.ai/humanize/weaver/writing-a-flow), the same thing by hand.
+See also: [Writing a flow](/humanize/weaver/writing-a-flow), the same thing by hand.

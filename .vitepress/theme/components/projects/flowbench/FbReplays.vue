@@ -55,7 +55,7 @@ const REPLAYS: Replay[] = [
     before: { label: 'GPT-5.6-sol goes first', value: 73.3 },
     after: { label: 'Opus 5 goes first', value: 78.2 },
     delta: '+4.9 points, from the order alone',
-    href: '/projects/hma',
+    href: '/hma/',
     source: 'HMA, self-reported',
   },
 ]

@@ -44,7 +44,7 @@ open-source our flows, benchmark them against other flows, and drop ours when th
   <li><b>Reward hacking is the normal failure.</b> Long runs fail by <em>looking</em> finished —
   a narrowed test, a special case, a stub under a confident summary. Our reviewers hunt for
   exactly that.</li>
-  <li><b>We only claim what we have measured.</b> <a href="/projects/flowbench">FlowBench</a>
+  <li><b>We only claim what we have measured.</b> <a href="/flowbench/">FlowBench</a>
   tests our flows against others, and we remove the ones that lose.</li>
   <li><b>Open source.</b> The runtime, the flows and the reproduction code are open source.
   Every published number comes with what is needed to check it.</li>
@@ -59,7 +59,7 @@ Research](https://www.nvidia.com/en-us/research/), [MIT HAN Lab](https://hanlab.
 tail of community contributors. The full list is in each repository's contributor graph:
 [Humanize](https://github.com/humanfia/humanize/graphs/contributors) ·
 [the flowverse](https://github.com/humanfia/flowverse/graphs/contributors) ·
-[this site](https://github.com/humanfia/humanfia.ai/graphs/contributors).
+[this site](https://github.com/humanfia/humanfia.github.io/graphs/contributors).
 
 ## Get in touch
 

@@ -175,4 +175,4 @@ dropped. That is why we compare competitions one by one here, and do not compare
 totals with today's.
 
 [The audit](https://github.com/agentkaggle/kaggle-results-audit) ·
-[Team Radar](https://agentkaggle.github.io/leaderboard/) · [HMA](/projects/hma)
+[Team Radar](https://agentkaggle.github.io/leaderboard/) · [HMA](/hma/)

@@ -49,6 +49,8 @@ for (const doc of await walk(DOCS, '.md')) {
   const text = await readFile(doc, 'utf8')
   for (const [, target] of text.matchAll(/\]\(([^)\s]+)\)/g)) {
     if (target.startsWith('http')) continue
+    // Another repository's site under this domain: not in this build. `pnpm check:docs` fetches it.
+    if (/^\/(?:humanize|kda-wishlist)(?:\/|#|$)/.test(target)) continue
     const [base, fragment] = target.split('#')
     if (!fragment) continue
     // A directory's index is reachable as `/flows/`, `/flows` and `/flows/index.md`, and all

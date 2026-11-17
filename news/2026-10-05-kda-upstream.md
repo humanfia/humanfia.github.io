@@ -71,7 +71,7 @@ contest:
 
 A kernel that wins a benchmark is a claim. A kernel a maintainer merges into the engine people
 serve models with is something else, and that is the bar this post is about. Since August, six
-pull requests carrying [KDA](/projects/kda)-written kernels have been merged into
+pull requests carrying [KDA](/kda/)-written kernels have been merged into
 [SGLang](https://github.com/sgl-project/sglang), all from Xiaoyu Zhang. We also count one
 merge elsewhere that did not stay.
 
@@ -357,4 +357,4 @@ How our agents wrote Kimi Delta Attention kernels up to 2.96× faster than Flash
 how they tried to cheat along the way, is in
 [KDA²: KDA optimizes KDA](/blog/2026-09-27-kda-for-kda).
 
-[KDA](/projects/kda) · [kernel-design-agents](https://github.com/mit-han-lab/kernel-design-agents)
+[KDA](/kda/) · [kernel-design-agents](https://github.com/mit-han-lab/kernel-design-agents)

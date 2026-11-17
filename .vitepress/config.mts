@@ -3,12 +3,14 @@ import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createContentLoader, defineConfig, type ContentData, type SiteConfig } from 'vitepress'
 
+import { OTHER_SITES } from './other-sites'
 import { authorsWithDeps } from './theme/projects'
 
 // humanfia.ai, served from the repository root: the CNAME in public/ is the custom domain,
-// so no base is prepended and every internal link is written from `/`. The documentation for
-// Humanize itself is a site of its own, built the same way from humanfia/humanize -- so
-// everything here links out to it rather than restating it.
+// so no base is prepended and every internal link is written from `/`. This repository is the
+// organisation's Pages site, so the other repositories' Pages are served under the same domain:
+// Humanize's page and its documentation are one site at /humanize/, built from humanfia/humanize.
+// Everything here links to it, as a path, rather than restating it (./other-sites.ts).
 const HOSTNAME = 'https://humanfia.ai'
 
 /** The projects, in the order they are worth reading: the runtime, the referee, the three
@@ -16,17 +18,21 @@ const HOSTNAME = 'https://humanfia.ai'
  *  one is already the first thing on the page it goes to.
  *
  *  Humanize is labelled the way its own README names it. RLCR Flow, the Claude Code plugin
- *  it grew out of, is not a project here: it lives on as the humanize1 flow, under Flows, and
- *  /projects/rlcr-loop redirects there.
+ *  it grew out of, is not a project here: it lives on as the humanize1 flow, under Flows.
+ *
+ *  Each project is at /<project>/. Humanize's is its own repository's site, so the link is
+ *  followed by the browser and not the router (`target`); the others are pages here. They were
+ *  at /projects/<project> until the documentation site was folded into this one, and
+ *  public/projects/ still sends each of those on.
  *
  *  The nav's dropdown, and nothing else: a project page is drawn full width, with no sidebar,
  *  so this is the one way between them. There is no longer a page above them either. */
 const PROJECT_LINKS = [
-  { text: 'Humanize', link: '/projects/humanize' },
-  { text: 'FlowBench', link: '/projects/flowbench' },
-  { text: 'HOA', link: '/projects/hoa' },
-  { text: 'KDA', link: '/projects/kda' },
-  { text: 'HMA', link: '/projects/hma' },
+  { text: 'Humanize', link: '/humanize/', target: '_self' },
+  { text: 'FlowBench', link: '/flowbench/' },
+  { text: 'HOA', link: '/hoa/' },
+  { text: 'KDA', link: '/kda/' },
+  { text: 'HMA', link: '/hma/' },
 ]
 
 /**
@@ -81,7 +87,9 @@ export default defineConfig({
 
   // The feeds are written by `buildEnd` below, after the link check has run, so the check has
   // no way of knowing they are about to exist. Every other dead link is still a failed build.
-  ignoreDeadLinks: [/^\/(?:blog|news)\/feed\.rss$/],
+  // Nor can it see the sites other repositories publish under this domain; `pnpm check:docs`
+  // fetches those.
+  ignoreDeadLinks: [/^\/(?:blog|news)\/feed\.rss$/, new RegExp(`^/(?:${OTHER_SITES.join('|')})(?:/|$)`)],
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
@@ -135,7 +143,7 @@ export default defineConfig({
     // to it is that project's page -- a Docs menu was a second table of contents for a site
     // this one does not own, and it went stale the moment that site moved a page.
     nav: [
-      { text: 'Projects', items: PROJECT_LINKS, activeMatch: '/projects/' },
+      { text: 'Projects', items: PROJECT_LINKS, activeMatch: '^/(?:flowbench|hoa|kda|hma)/' },
       { text: 'Flows', link: '/flows/', activeMatch: '/flows/' },
       { text: 'Blog', link: '/blog/', activeMatch: '/blog/' },
       { text: 'News', link: '/news/', activeMatch: '/news/' },
@@ -152,7 +160,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/humanfia' }],
 
     editLink: {
-      pattern: 'https://github.com/humanfia/humanfia.ai/edit/main/:path',
+      pattern: 'https://github.com/humanfia/humanfia.github.io/edit/main/:path',
       text: 'Suggest an edit to this page',
     },
 

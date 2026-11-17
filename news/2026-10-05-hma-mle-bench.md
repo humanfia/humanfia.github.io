@@ -218,4 +218,4 @@ The whole suite reruns from the repository: the baselines, HMA, and the cap and 
 ablations. To use the same alternation on your own work, run it as a flow:
 [fixed-interrupt flame chase](/flows/fixed-interrupt-flame-chase).
 
-[humanfia/hma](https://github.com/humanfia/hma) · [HMA](/projects/hma)
+[humanfia/hma](https://github.com/humanfia/hma) · [HMA](/hma/)

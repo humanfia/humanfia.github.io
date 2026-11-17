@@ -101,7 +101,7 @@ const GROUPS: Group[] = [
   {
     id: 'humanize',
     name: 'Humanize',
-    href: '/projects/humanize',
+    href: '/humanize/',
     what: 'The runtime that drives thirteen coding-agent CLIs through a flow and records every turn.',
     members: [
       { who: 'futrime', role: 'Lead. The runtime itself — the anchor, the tracing, the backends and the CLI.' },
@@ -115,7 +115,7 @@ const GROUPS: Group[] = [
   {
     id: 'kda',
     name: 'KDA',
-    href: '/projects/kda',
+    href: '/kda/',
     what: 'Kernel Design Agents. Agents that research, write and profile GPU kernels, judged by speed on real hardware.',
     members: [
       { who: 'DongyunZou', role: 'Lead. The workflow, and the MLSys 2026 FlashInfer contest entries.' },
@@ -129,7 +129,7 @@ const GROUPS: Group[] = [
   {
     id: 'hoa',
     name: 'HOA',
-    href: '/projects/hoa',
+    href: '/hoa/',
     what: 'Humanfia Olympiad Agents. Mathematics, physics and quantum information, checked by Lean 4.',
     members: [
       { who: 'ZhengyangZhang06', role: 'Lead. PutnamBench, IMO 2026 and both Lean-Eval runs.' },
@@ -142,7 +142,7 @@ const GROUPS: Group[] = [
   {
     id: 'flowbench',
     name: 'FlowBench',
-    href: '/projects/flowbench',
+    href: '/flowbench/',
     what: 'Scores flows against each other on day-long tasks; the winner becomes the default.',
     members: [
       { who: 'futrime', role: 'Lead. The harness, the task format and the scoring.' },
@@ -154,7 +154,7 @@ const GROUPS: Group[] = [
     id: 'hma',
     formerly: 'hka',
     name: 'HMA',
-    href: '/projects/hma',
+    href: '/hma/',
     what: 'Humanize MLE Agents. Two native coding agents take turns over one workspace, and medal more often than either alone.',
     members: [
       { who: 'antoinegg1', role: 'Co-lead. The method, the paper experiments, and the Kaggle entries and audit before them.' },

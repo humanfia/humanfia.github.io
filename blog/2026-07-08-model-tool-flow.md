@@ -149,5 +149,5 @@ describing something other than what it does.
 That is what Humanize is, in the least glamorous sense available: a model-ability booster, worth
 the most where the model has ability the run was wasting.
 
-[The flows](/flows/) · [the runtime](/projects/humanize) ·
+[The flows](/flows/) · [the runtime](/humanize/) ·
 [the same ablation, four models later](/blog/2026-09-27-kda-for-kda#humanize-better-flows-stronger-agents)

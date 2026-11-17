@@ -1,7 +1,9 @@
 # humanfia.ai
 
 The Humanfia website: the team, its projects and its results, built with VitePress. It is
-served at [humanfia.ai](https://humanfia.ai/).
+served at [humanfia.ai](https://humanfia.ai/), and it is the organisation's GitHub Pages site,
+so every other `humanfia` repository with Pages on is served under the same domain
+(see Project sites below).
 
 ## Usage
 
@@ -13,20 +15,21 @@ pnpm dev      # local preview
 pnpm build    # build into .vitepress/dist
 ```
 
-Pages are Markdown: `index.md`, `projects/`, `flows/`, `about/`, and one file per
-post in `news/` or `blog/`. Files in `public/` are published as they are. The Humanize page is
-one component: `.vitepress/theme/components/projects/humanize/`.
+Pages are Markdown: `index.md`, a directory per project (`hoa/`, `hma/`, `kda/`, `flowbench/`),
+`flows/`, `about/`, and one file per post in `news/` or `blog/`. Files in `public/` are
+published as they are. The Humanize page is not here: it is the front page of Humanize's own
+documentation, in [humanfia/humanize](https://github.com/humanfia/humanize) (`docs/`).
 
 The figures in the Flow Science post on the blog are drawn by
 `.vitepress/theme/components/flowscience/`: a line chart with log and hand-spaced axes the post
 kit does not have yet, and the data it plots, read off the charts in our talk slides
 (`deck-data.json`, described in `figures.ts`).
 
-The HMA page (`projects/hma.md`) is one full-width component,
+The HMA page (`hma/index.md`) is one full-width component,
 `.vitepress/theme/components/projects/hma/`; its numbers live in `data.ts` there, each with its
 source.
 
-The KDA page (`projects/kda.md`) is drawn by its own components,
+The KDA page (`kda/index.md`) is drawn by its own components,
 `.vitepress/theme/components/projects/kda/`; its numbers live in the page's frontmatter, each
 block naming the write-up it comes from.
 
@@ -60,6 +63,40 @@ Achievements, one per topic, from the newest post. Figures come from the post ki
 that you write straight into the markdown. [CONTRIBUTING.md](CONTRIBUTING.md) is the guide to
 the post layout and every component in the kit.
 
+### Project sites
+
+Every project is at `humanfia.ai/<project>/`: one page, or one site, per project.
+
+- A project **without documentation** is a page here: `hoa/index.md` is
+  [humanfia.ai/hoa/](https://humanfia.ai/hoa/).
+- A project **with documentation** keeps it in its own repository and publishes it with GitHub
+  Pages. Because this repository is the organisation's Pages site (`humanfia.github.io`) and
+  `public/CNAME` gives it the domain, GitHub serves that build at `humanfia.ai/<repository>/`.
+  Its front page is the project's page; there is no second one here.
+  [humanfia.ai/humanize/](https://humanfia.ai/humanize/) is
+  [humanfia/humanize](https://github.com/humanfia/humanize)'s `docs/`, and
+  [humanfia.ai/kda-wishlist/](https://humanfia.ai/kda-wishlist/) is
+  [humanfia/kda-wishlist](https://github.com/humanfia/kda-wishlist).
+
+Things to know:
+
+- **A repository's path wins.** A repository with Pages on owns `/<repository name>/`. No page
+  here may start with such a name, and a repository named like a route here (`flows`, `blog`,
+  `news`, `about`, `hoa`, `hma`, `kda`, `flowbench`, ...) must not turn Pages on. To give one
+  of those projects documentation, delete its page here in the same change that turns its
+  repository's Pages on.
+- **Links are paths.** A link to another repository's site is written from the root,
+  `/humanize/user/first-run`, like any link here. `.vitepress/other-sites.ts` lists those
+  sites: the build leaves links to them out of its dead-link check, the theme has the browser
+  load them instead of the router, and `pnpm check:docs` fetches every one.
+- **Same origin.** Those sites share this one's cookies and localStorage, and each builds its
+  own header and footer.
+- **Renaming this repository, or changing `public/CNAME`, moves every one of those sites.**
+
+The projects were at `humanfia.ai/projects/<project>` and the documentation at
+`docs.humanfia.ai/<repository>/` until 2026-11-17. `public/projects/` holds a redirect for each
+old project page; docs.humanfia.ai is retired and answers nothing.
+
 ### Deploying
 
 A push to `main` builds the site and deploys it to GitHub Pages
@@ -77,7 +114,7 @@ request runs the build and three checks, and all four have to pass:
 pnpm build          # every internal link resolves
 pnpm check:anchors  # every #fragment resolves to a heading the site built
 pnpm check:feed     # the feed holds every post, and a click on it is not a 404
-pnpm check:docs     # every link out to the documentation reaches the page it names
+pnpm check:docs     # every link to another repository's site reaches the page it names
 ```
 
 ## License
@@ -85,7 +122,8 @@ pnpm check:docs     # every link out to the documentation reaches the page it na
 The site's code — `.vitepress/` (configuration, theme, components and checks), `scripts/`,
 the workflows and the build configuration — is licensed under [Apache-2.0](LICENSE).
 
-The content — the pages in `index.md`, `blog/`, `projects/`, `team/` and `about/`, and the
+The content — the pages in `index.md`, `blog/`, `news/`, `flows/`, `about/` and the project
+directories, and the
 images under `public/` — is licensed under
 [CC-BY-4.0](LICENSE-CC-BY-4.0): reuse it with attribution to Humanfia and a link to the page.
 

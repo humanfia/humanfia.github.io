@@ -98,7 +98,7 @@ we recommended Claude as builder and Codex as reviewer.
 ## Beyond general software: Kernel Design Agents
 
 The same workflow architecture can be specialised for high-value domains.
-[KDA](/projects/kda), Kernel Design Agents, applies iterative generation, benchmarking, review
+[KDA](/kda/), Kernel Design Agents, applies iterative generation, benchmarking, review
 and refinement to produce optimised kernels at scale.
 
 This is where agent workflows become more than coding assistance. They become repeatable
@@ -124,11 +124,11 @@ comparison was added in October 2026.</Sidenote>
 </template>
 <template #after>
 <table class="sw-table"><thead><tr><th>#</th><th>By October</th></tr></thead><tbody>
-<tr><th>1</th><td><strong>Execution:</strong> <a href="/projects/humanize">Humanize</a>, driving your CLIs</td></tr>
+<tr><th>1</th><td><strong>Execution:</strong> <a href="/humanize/">Humanize</a>, driving your CLIs</td></tr>
 <tr><th>2</th><td><strong>The loop:</strong> <a href="/flows/humanize1">humanize1</a>, <a href="/flows/rlar">RLAR</a> and more <a href="/flows/">flows</a></td></tr>
 <tr><th>3</th><td><strong>Review:</strong> any CLI, fresh every round</td></tr>
 <tr><th>4</th><td><strong>Domains:</strong> KDA, HOA and HMA</td></tr>
-<tr><th>5</th><td><strong>Measurement:</strong> <a href="/projects/flowbench">FlowBench</a>, ranking flows</td></tr>
+<tr><th>5</th><td><strong>Measurement:</strong> <a href="/flowbench/">FlowBench</a>, ranking flows</td></tr>
 </tbody></table>
 </template>
 </SwipeCompare>
@@ -232,13 +232,13 @@ Here is the whole of it in one picture.
 Kimi Code, Qwen Code, pi and opencode, plus any agent that speaks the Agent Client Protocol, and
 a person at the keyboard, who can take a role like any agent. Each CLI is driven through the
 interface it already serves, and runs on its own sign-in or on an
-[account](https://docs.humanfia.ai/humanize/features/accounts) you add. The frontier moves every
+[account](/humanize/features/accounts) you add. The frontier moves every
 few weeks, and the wrapper around one vendor is the least valuable thing in this picture.<Sidenote>This
 section was updated in October 2026 to match humanize as it is today: more backends, the flows
 that now ship built in, and the runtime's real layers.</Sidenote>
 
-**Humanize, the runtime.** [Humanize](/projects/humanize) is one layer in two halves. The lower
-half, [coganchor](https://docs.humanfia.ai/humanize/features/anchor), is the only part that knows how to drive a CLI: which backend a role is, which
+**Humanize, the runtime.** [Humanize](/humanize/) is one layer in two halves. The lower
+half, [coganchor](/humanize/features/anchor), is the only part that knows how to drive a CLI: which backend a role is, which
 account it runs as, which machine its turns land on, where a turn goes when that place cannot
 take it, and what its tokens cost. Nothing above it reaches past it to a driver.
 
@@ -246,7 +246,7 @@ The upper half opens and resumes sessions and takes turns in the order a flow as
 swarm when it should, and writes the whole run down as it happens, so it reads back as a
 timeline. The command line, the terminal interface, the daemon that keeps runs alive after a
 terminal closes, and the Python SDK are all ways into that one runtime, not copies of it. Its
-documentation is at [docs.humanfia.ai/humanize](https://docs.humanfia.ai/humanize/).
+documentation is at [humanfia.ai/humanize](/humanize/).
 
 **Flows.** [The flows](/flows/): [RLAR](/flows/rlar), [Flame Chase](/flows/flame-chase),
 [Ralph loop](/flows/ralph-loop) and the other loops built in, [humanize1](/flows/humanize1),
@@ -254,13 +254,13 @@ and every flow the [flowverse](https://github.com/humanfia/flowverse) lists. The
 already uses are kept alongside ours, so that a comparison is a flag rather than a
 reimplementation.
 
-**Applications.** [HOA](/projects/hoa) for olympiad mathematics, [KDA](/projects/kda) for GPU
-kernels and [HMA](/projects/hma) for machine-learning engineering. Each was chosen because the
+**Applications.** [HOA](/hoa/) for olympiad mathematics, [KDA](/kda/) for GPU
+kernels and [HMA](/hma/) for machine-learning engineering. Each was chosen because the
 scoreboard belongs to somebody else.
 
 ## Why the benchmark is a layer and not a report
 
-[FlowBench](/projects/flowbench) sits alongside the stack rather than on top of it, and the
+[FlowBench](/flowbench/) sits alongside the stack rather than on top of it, and the
 arrow that matters is the one going back up.
 
 There is a well-known trick where you start a fresh session every turn, so nothing carries over

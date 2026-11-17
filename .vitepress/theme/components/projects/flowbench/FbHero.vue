@@ -53,7 +53,7 @@ onMounted(() => (motion.value = !prefersReducedMotion()))
         <div class="fb-actions">
           <a class="fb-btn primary" href="/flows/">The flows it scores <span aria-hidden="true">→</span></a>
           <a class="fb-btn" href="https://github.com/humanfia/flowverse" target="_blank" rel="noreferrer">humanfia/flowverse <span aria-hidden="true">↗</span></a>
-          <a class="fb-btn" href="/projects/humanize">The runtime <span aria-hidden="true">→</span></a>
+          <a class="fb-btn" href="/humanize/">The runtime <span aria-hidden="true">→</span></a>
         </div>
       </div>
       <FbScoreboard />

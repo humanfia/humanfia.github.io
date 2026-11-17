@@ -269,7 +269,7 @@ produced kernels like this on the way to KDA². Six gates now stop them before r
 <template #why>
 
 KDA runs on our flows: its first runs used RLCR Flow, now the [`humanize1`](/flows/humanize1)
-flow, and KDA² runs on [Humanize](/projects/humanize) flows. Results come from outside
+flow, and KDA² runs on [Humanize](/humanize/) flows. Results come from outside
 benchmarks and from pull requests that upstream maintainers merged.
 
 </template>

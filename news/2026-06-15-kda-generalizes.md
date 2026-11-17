@@ -25,7 +25,7 @@ fp8:
   - { label: FlyDSL fp8, detail: packed P · opt-in, values: { tf: 643 } }
 ---
 
-Everything published about [KDA](/projects/kda) so far had been on NVIDIA hardware, with
+Everything published about [KDA](/kda/) so far had been on NVIDIA hardware, with
 excellent documentation, a mature profiler and a large public corpus of prior kernels. That is a
 reasonable place to start and a bad place to stop, because it leaves the obvious objection
 open: perhaps the agent is retrieving, not reasoning.
@@ -129,5 +129,5 @@ corpus at all. A loop that works only where the answers already exist on the int
 search engine with extra steps. A loop that works on thin documentation, and says plainly where
 it stopped, is a method.
 
-[KDA](/projects/kda) · [rocm-KDA-pilot](https://github.com/jhinpan/rocm-KDA-pilot) ·
+[KDA](/kda/) · [rocm-KDA-pilot](https://github.com/jhinpan/rocm-KDA-pilot) ·
 [NVlabs/kda](https://github.com/NVlabs/kda)

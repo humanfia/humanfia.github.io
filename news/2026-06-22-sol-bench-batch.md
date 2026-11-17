@@ -39,7 +39,7 @@ standings:
   - { track: FlashInfer-Bench, rank: 3, score: 0.7962, leader: SF Tensor, best: 0.7992 }
 ---
 
-On a **single 8×B200 node**, over about a week in June, [KDA](/projects/kda) generated kernels
+On a **single 8×B200 node**, over about a week in June, [KDA](/kda/) generated kernels
 that took **53 first places** on [SOL-ExecBench](https://research.nvidia.com/benchmarks/sol-execbench),
 NVIDIA's leaderboard that scores each kernel against its speed-of-light bound.<Sidenote>The
 June count of 53 is Humanfia-reported; the board does not keep history. The counts below are
@@ -144,5 +144,5 @@ That changes which problems are worth attacking. A kernel that would take an eng
 days and probably yield nothing is not worth an engineer's three days. It is trivially worth a
 slot in a queue.
 
-[KDA](/projects/kda) · [the board](https://research.nvidia.com/benchmarks/sol-execbench) ·
+[KDA](/kda/) · [the board](https://research.nvidia.com/benchmarks/sol-execbench) ·
 [#1 on L1 in July](/news/2026-07-02-solexec-l1)

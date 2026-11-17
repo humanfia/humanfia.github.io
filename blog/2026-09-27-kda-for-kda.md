@@ -597,4 +597,4 @@ If you have a workload that wants to be optimized via KDAgent, submit it at
 [nvlabs.github.io/kda](https://nvlabs.github.io/kda/#submit).
 
 [The kernels](https://github.com/NVlabs/kda/tree/260927-kda-for-kda) ·
-[Humanize](https://github.com/humanfia/humanize) · [KDA](/projects/kda)
+[Humanize](https://github.com/humanfia/humanize) · [KDA](/kda/)

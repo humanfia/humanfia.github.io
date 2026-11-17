@@ -201,4 +201,4 @@ number above survived that.
   <text class="accent" x="200" y="190" data-step="3">■ merged</text>
 </AnimatedDiagram>
 
-[KDA](/projects/kda) · [KDA-Pilot](https://github.com/BBuf/KDA-Pilot)
+[KDA](/kda/) · [KDA-Pilot](https://github.com/BBuf/KDA-Pilot)

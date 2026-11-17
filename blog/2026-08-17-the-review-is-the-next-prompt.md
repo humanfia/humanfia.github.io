@@ -154,4 +154,4 @@ decisions are the ones people skip.
 
 [Read the flow](/flows/rlar) ·
 [Read the source](https://github.com/humanfia/humanize/tree/main/src/hmz/flows/builtin/rlar) ·
-[Run it](/projects/humanize)
+[Run it](/humanize/)

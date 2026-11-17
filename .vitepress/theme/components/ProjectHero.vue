@@ -67,9 +67,10 @@ const hero = computed<Hero | undefined>(() => frontmatter.value.hero)
 
 /** The projects menu from the nav, so the tabs are the menu and never a second list of it. */
 const projects = computed<{ text: string; link: string }[]>(
-  () => theme.value.nav?.find((item: { activeMatch?: string }) => item.activeMatch === '/projects/')?.items ?? [],
+  () => theme.value.nav?.find((item: { text?: string }) => item.text === 'Projects')?.items ?? [],
 )
-const here = computed(() => `/${page.value.relativePath.replace(/\.md$/, '')}`)
+// A project's page is /<project>/index.md, and the menu names it /<project>/.
+const here = computed(() => `/${page.value.relativePath.replace(/(?:index)?\.md$/, '')}`)
 
 const title = computed(() => {
   const whole = String(frontmatter.value.title ?? '')
