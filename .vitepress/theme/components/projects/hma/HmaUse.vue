@@ -28,7 +28,7 @@ import { vReveal } from '../../../home/motion'
       <p class="hma-fine">
         Reruns still use the public answer keys, not the paper's corrected ones; the
         <a href="https://github.com/humanfia/hma/blob/main/docs/verification.md" target="_blank" rel="noreferrer">validation record</a>
-        lists what has been checked. More on <a href="/projects/humanize">Humanize</a>.
+        lists what has been checked. More on <a href="/humanize/">Humanize</a>.
       </p>
 
       <div class="hma-player" v-reveal>

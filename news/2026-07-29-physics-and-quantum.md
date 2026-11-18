@@ -146,4 +146,4 @@ and **37 of 40** end-to-end proof review passes, for 92.5%. Conditional on seman
 the proof rate is **97.4%**. Once the statement is right, the proof almost always follows. The
 full `lake build` passed.
 
-[HOA](/projects/hoa)
+[HOA](/hoa/)

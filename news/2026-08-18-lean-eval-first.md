@@ -144,7 +144,7 @@ legible; one that starts from a blank file fails in ways that are not.
 <PostCard title="The compiler is the reviewer that never gets tired.">
 
 Lean's error output is fed back into the run and the code is refined against it, round after
-round, by [HOA](/projects/hoa) and RLCR Flow agents. Nothing about this is clever. Almost nobody
+round, by [HOA](/hoa/) and RLCR Flow agents. Nothing about this is clever. Almost nobody
 does it for hundreds of rounds without a human losing patience.
 
 </PostCard>
@@ -171,5 +171,5 @@ Nothing is accepted with a `sorry` placeholder or an unproved assumption standin
 
 That bar is the whole reason a leaderboard position in formal mathematics means anything at all.
 
-[HOA](/projects/hoa) · [the flows](https://github.com/humanfia/flowverse) ·
-[the runtime](/projects/humanize)
+[HOA](/hoa/) · [the flows](https://github.com/humanfia/flowverse) ·
+[the runtime](/humanize/)

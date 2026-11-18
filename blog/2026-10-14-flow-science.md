@@ -71,7 +71,7 @@ local optimum to a better one.
 | Counting | an exact number | open |
 
 Theorem proving, hyperparameter tuning and many other tasks need flows of their own. That is
-why [Humanize](/projects/humanize) is a framework for writing flows, not a single loop.
+why [Humanize](/humanize/) is a framework for writing flows, not a single loop.
 
 ## Four benchmarks, one set of models
 
@@ -156,5 +156,5 @@ Chase:
 
 The work needs a runtime that can express any of these variations as a short piece of Python,
 run it for a day on real hardware and record every turn on one clock. That is what
-[Humanize](/projects/humanize) is. How it works underneath is in
-[its documentation](https://docs.humanfia.ai/humanize/features/).
+[Humanize](/humanize/) is. How it works underneath is in
+[its documentation](/humanize/features/).

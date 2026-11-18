@@ -78,7 +78,7 @@ negotiate, and the private leaderboard arrives after every decision has already 
 
 ## What was run
 
-Built on [Humanize](/projects/humanize), we designed roughly **ten distinct agent workflows**
+Built on [Humanize](/humanize/), we designed roughly **ten distinct agent workflows**
 and pointed all of them at live competitions. They differ in the things we think actually
 matter on a long run:
 
@@ -201,4 +201,4 @@ alone.
 
 [The audit](https://github.com/agentkaggle/kaggle-results-audit) ·
 [the live leaderboard](https://agentkaggle.github.io/leaderboard/) ·
-[HMA](/projects/hma)
+[HMA](/hma/)

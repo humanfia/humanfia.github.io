@@ -171,5 +171,5 @@ than to move the boolean.
 
 > When correctness is a spectrum and the CI is a boolean, let the request choose.
 
-[KDA](/projects/kda) · [the PR](https://github.com/sgl-project/sglang/pull/33453) ·
+[KDA](/kda/) · [the PR](https://github.com/sgl-project/sglang/pull/33453) ·
 [Lossless Is a Choice](/blog/2026-07-02-sglang-omni-numerics)

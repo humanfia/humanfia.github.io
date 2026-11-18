@@ -244,4 +244,4 @@ formal statement says what the problem says, is automated, not an independent hu
 
 [IPhO 2026](https://github.com/humanfia/ipho2026) · [IChO 2026](https://github.com/humanfia/icho2026) ·
 [IOI 2026](https://github.com/humanfia/ioi2026) · [IBO 2024](https://github.com/humanfia/ibo2024) ·
-[HOA](/projects/hoa)
+[HOA](/hoa/)

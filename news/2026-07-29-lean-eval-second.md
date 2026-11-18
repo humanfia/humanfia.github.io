@@ -33,7 +33,7 @@ board:
 Three weeks later the same loop [took first place with 172 problems](/news/2026-08-18-lean-eval-first).
 :::
 
-Running on `gpt-5.6-sol` at max effort, [Humanize](/projects/humanize) is second on the
+Running on `gpt-5.6-sol` at max effort, [Humanize](/humanize/) is second on the
 [Lean-Eval](https://lean-lang.org/eval/) leaderboard. By our count today it has solved
 **149 of 219** problems. First is ByteDance's Seed Prover, at 155.<Sidenote>Those two counts are
 ours, from the day. The board's published log dates every proof by when it was accepted, and by
@@ -96,12 +96,12 @@ loop, with no component anywhere in it that knows Lean specifically.
   <rect class="accent" x="-6" y="-6" width="12" height="12" data-step="3" data-travel="#le2-hma" data-loop />
 </AnimatedDiagram>
 
-The loop is the same one that runs [kernel work](/projects/kda) and
-[Kaggle competitions](/projects/hma).
+The loop is the same one that runs [kernel work](/kda/) and
+[Kaggle competitions](/hma/).
 
 > A specialist should beat a generalist on the specialist's benchmark. That it does so by so
 > little is the interesting number.
 
 That is why we thought the gap was closable.
 
-[HOA](/projects/hoa) · [the flows](https://github.com/humanfia/flowverse)
+[HOA](/hoa/) · [the flows](https://github.com/humanfia/flowverse)

@@ -48,7 +48,7 @@ Every task uses a check that already existed: the code runs faster, compiles or 
 <FbRule n="3" title="Model, tools and budget never change between runs" />
 <FbRule n="4" title="Flows are scored exactly as users run them">
 
-Flows run unchanged in [Humanize](/projects/humanize), the runtime users install.
+Flows run unchanged in [Humanize](/humanize/), the runtime users install.
 
 </FbRule>
 

@@ -2,7 +2,6 @@ import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import { h } from 'vue'
 
-import Install from './components/Install.vue'
 import NewsList from './components/NewsList.vue'
 import PostLayout from './components/PostLayout.vue'
 import PostMosaic from './components/PostMosaic.vue'
@@ -15,6 +14,7 @@ import HomeLanding from './home/HomeLanding.vue'
 import './style.css'
 import './home/home.css'
 import './post.css'
+import { isOtherSite } from '../other-sites'
 
 // The default theme, plus the components the pages use. A post -- anything in blog/ or news/ --
 // is drawn by `post`, a layout of its own (components/PostLayout.vue): config.mts selects it,
@@ -30,8 +30,17 @@ export default {
       'nav-bar-title-after': () => h(Wordmark),
       'doc-before': () => h(FlowsBack),
     }),
-  enhanceApp({ app }) {
-    app.component('Install', Install)
+  enhanceApp({ app, router }) {
+    // A path another repository publishes under this domain (/humanize/, ../other-sites.ts) is
+    // the same origin, so the router would take a click on it for a page of this site and answer
+    // with its own 404. Hand those to the browser instead.
+    router.onBeforeRouteChange = (to) => {
+      if (typeof window === 'undefined') return
+      const url = new URL(to, window.location.origin)
+      if (url.origin !== window.location.origin || !isOtherSite(url.pathname)) return
+      window.location.assign(url.href)
+      return false
+    }
     app.component('NewsList', NewsList)
     app.component('PostMosaic', PostMosaic)
     app.component('post', PostLayout)

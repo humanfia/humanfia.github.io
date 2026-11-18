@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://humanfia.ai/sitemap.xml
+Sitemap: https://humanfia.ai/humanize/sitemap.xml

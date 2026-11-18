@@ -157,5 +157,5 @@ An earlier version of this post gave 6.1× on a Wan 2.2 workload, a figure with 
 source, so it is gone.
 :::
 
-[KDA](/projects/kda) ·
+[KDA](/kda/) ·
 [the contest kernels](https://github.com/mit-han-lab/mlsys2026-flashinfer-contest-solution)

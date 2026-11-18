@@ -168,7 +168,7 @@ the tree. What held this one together was the loop around the agents: a plan agr
 then rounds of building under an independent review. That loop was RLCR Flow, then a
 Claude Code plugin. It now lives on as the [humanize1 flow](/flows/humanize1), the same
 plan-then-review loop run by Humanize. This task is why we started caring about the loop rather than the model, and it is
-the kind of task [FlowBench](/projects/flowbench) is being assembled from.
+the kind of task [FlowBench](/flowbench/) is being assembled from.
 
 The pull request is open upstream as a request for comments, and the gem5 maintainers decide
 what happens to it next.<Sidenote>The pull request's description, written when it was opened,
@@ -176,4 +176,4 @@ says 563 files and about 24k insertions. The counts on this page are from its fi
 stands today, which is a little larger.</Sidenote>
 
 [The pull request, gem5/gem5#2969](https://github.com/gem5/gem5/pull/2969) ·
-[The humanize1 flow](/flows/humanize1) · [FlowBench](/projects/flowbench)
+[The humanize1 flow](/flows/humanize1) · [FlowBench](/flowbench/)

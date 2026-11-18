@@ -150,4 +150,4 @@ maintained by the PutnamBench team. A
 proof files is open for review, and the full solving pipeline is public.
 
 [humanfia/hoa-qed/putnambench](https://github.com/humanfia/hoa-qed/tree/main/putnambench) ·
-[HOA](/projects/hoa)
+[HOA](/hoa/)

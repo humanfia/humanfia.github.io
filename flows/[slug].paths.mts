@@ -13,7 +13,9 @@ import { FLOWS } from '../.vitepress/theme/flows'
  *  (ours replaces it, with the flow's name as hmz calls it), as do its badges and its table of
  *  contents (the page has an outline), and every relative link and image -- inline, with a
  *  title, by reference, or in raw HTML -- is pointed back at the repository, since none of them
- *  exist on this site. Code is left as it was written. The whole is wrapped in `v-pre`, so a
+ *  exist on this site. A link to docs.humanfia.ai, where the documentation was until it was
+ *  folded into humanfia.ai, is sent to the same path here: a release pins the README it was cut
+ *  with. Code is left as it was written. The whole is wrapped in `v-pre`, so a
  *  `{{` anywhere in it is text rather than Vue. */
 export function adapt(markdown: string, repo: string, commit: string): string {
   const blob = `https://github.com/${repo}/blob/${commit}/`
@@ -36,6 +38,7 @@ export function adapt(markdown: string, repo: string, commit: string): string {
       .replace(/\b(src|href)=(["'])([^"']+)\2/g, (_, attr, q, path) => `${attr}=${q}${at(attr === 'src' ? raw : blob, path)}${q}`)
   const body = markdown
     .replace(/\r/g, '')
+    .replace(/https:\/\/docs\.humanfia\.ai\//g, 'https://humanfia.ai/')
     .replace(/^#\s[^\n]*\n/, '')
     .replace(/^\s*\[!\[[^\n]*\n/gm, '')
     .replace(/^## Table of Contents\n[\s\S]*?(?=^## )/m, '')
@@ -66,7 +69,7 @@ export default {
           `<FlowFacts module="${module.name}" />`,
           '',
           '::: info From its README',
-          `Nobody has written this flow a page of its own yet, so this is its README, as of the release above. Its roles, params and what ends it are there; [Humanize's documentation](https://docs.humanfia.ai/humanize) says how flows are run.`,
+          `Nobody has written this flow a page of its own yet, so this is its README, as of the release above. Its roles, params and what ends it are there; [Humanize's documentation](/humanize/) says how flows are run.`,
           ':::',
           '',
           adapt(module.readme.markdown, module.latest.repo, module.latest.commit),

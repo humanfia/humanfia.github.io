@@ -28,7 +28,7 @@ const motion = ref(false)
 
 const GITHUB = 'https://github.com/humanfia'
 const REPO = 'https://github.com/humanfia/humanize'
-const DOCS = 'https://docs.humanfia.ai/humanize/'
+const DOCS = '/humanize/'
 
 // ------------------------------------------------------------------------------------ hero
 
@@ -72,7 +72,7 @@ const STEPS = [
     tag: 'Runtime',
     title: 'Humanize runs the flows.',
     body: 'It opens and resumes sessions, keeps a budget in time, cost or tokens, puts the work in a worktree, a container or on another machine, and writes every turn down on one clock.',
-    link: { text: 'Meet Humanize', href: '/projects/humanize' },
+    link: { text: 'Meet Humanize', href: '/humanize/' },
   },
   {
     tag: 'Agents',
@@ -90,7 +90,7 @@ const STEPS = [
     tag: 'FlowBench',
     title: 'FlowBench makes the winning flow the next default.',
     body: 'FlowBench scores flows against each other on long-horizon work, ours included, with the model held fixed. The winner becomes the next default.',
-    link: { text: 'About FlowBench', href: '/projects/flowbench' },
+    link: { text: 'About FlowBench', href: '/flowbench/' },
   },
 ]
 const stackEl = ref<HTMLElement | null>(null)
@@ -275,7 +275,7 @@ onBeforeUnmount(() => {
               that runs them, and results checked by outside graders.
             </p>
             <div class="h-actions h-load" style="--d: 0.6s">
-              <a class="h-btn h-btn-primary" href="/projects/humanize">Get started</a>
+              <a class="h-btn h-btn-primary" href="/humanize/">Get started</a>
               <a class="h-btn h-btn-ghost" :href="GITHUB" target="_blank" rel="noreferrer">
                 View on GitHub <span aria-hidden="true">↗</span>
               </a>

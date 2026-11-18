@@ -13,7 +13,7 @@
 // below. The visual grammar every scene is drawn in is `components/flow/grammar.ts`.
 //
 // These pages moved here from humanize's documentation, at the same slugs, so every
-// `docs.humanfia.ai/humanize/flows/<slug>` that was ever linked lands on `/flows/<slug>`.
+// link to a flow's page there (`flows/<slug>` under its base) lands on `/flows/<slug>`.
 //
 // This file is imported by the dynamic route (`flows/[slug].paths.mts`) as well as by the
 // theme, so it imports nothing.

@@ -65,11 +65,12 @@ jobs:
       - name: The feed is a feed, and its links work
         run: pnpm check:feed
 
-      # The documentation is a site of its own and moves pages without telling this one, and
-      # what it leaves behind answers 200 -- so neither the build nor the two checks above can
-      # see a link that has gone stale. This fetches every one of them. It reads the sources
-      # rather than the build, so it is last only because it is the one that needs the network.
-      - name: Every link to the documentation reaches the page it names
+      # Humanize's page and documentation are another repository's site under this domain
+      # (/humanize/). It moves pages without telling this one, and what it leaves behind answers
+      # 200 -- so neither the build nor the two checks above can see a link that has gone stale.
+      # This fetches every one of them. It reads the sources rather than the build, so it is
+      # last only because it is the one that needs the network.
+      - name: Every link to another repository's site reaches the page it names
         run: pnpm check:docs
 
       # `include-hidden-files` because VitePress writes a `.nojekyll` into the output, and this

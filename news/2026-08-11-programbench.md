@@ -127,7 +127,7 @@ convergence, so what we have measured is partly the budget rather than the metho
 statement is this: the number at four hours is 3.5%, the slope at four hours is positive, and
 we do not yet know where it goes.
 
-Finding that out, rather than guessing, is what [FlowBench](/projects/flowbench) is for.
+Finding that out, rather than guessing, is what [FlowBench](/flowbench/) is for.
 
 [ProgramBench](https://programbench.com/) · [The flows](/flows/) ·
-[FlowBench](/projects/flowbench)
+[FlowBench](/flowbench/)
