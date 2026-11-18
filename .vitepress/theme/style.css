@@ -443,6 +443,16 @@ a.card:hover {
   --hf-wordmark-height: 27px;
 }
 
+/* At the narrowest width the bar is drawn open (768px, where the theme swaps the hamburger for
+   the links) the five links, the search box and the overflow button are a few pixels more than
+   the window, and the page scrolls sideways to show them. The search box's key hint is the one
+   thing in the bar that is not needed to use it, so it goes until there is room. */
+@media (min-width: 768px) and (max-width: 819px) {
+  .VPNavBarSearch .DocSearch-Button-Keys {
+    display: none;
+  }
+}
+
 /* ---------------------------------------------------------------------------------------
    The green and Hyacine's colours where a reader sees them on every page: the green into cyan
    in a band across the top, and what is selected washed in her pink.
