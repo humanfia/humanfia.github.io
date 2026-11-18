@@ -5,9 +5,9 @@
 // tiles on /flows/, and what a run of it *looks like*, as a scene <FlowPlayer> plays on each
 // flow's page and <FlowThumb> plays, small, on its tile. Keeping all three here means the catalogue and the diagrams cannot disagree.
 //
-// Everything is read off the flows themselves: humanize's `src/hmz/flows/builtin/` for `chat`
-// and the six loops beside it, and for the rest the repository each is released from, as the
-// official flowverse (https://github.com/humanfia/flowverse) lists it. What a release *ships
+// Everything is read off the flows themselves: the repository each is released from, as the
+// official flowverse (https://github.com/humanfia/flowverse) lists it. Humanize ships no flow;
+// `chat` is the one thing here that is in `hmz` itself, and it is a conversation, not a flow. What a release *ships
 // as* -- its versions, its pinned commit, its licence, its README -- is not written here at all:
 // `.vitepress/flowverse.mts` reads it from the flowverse on every build, by the `module` named
 // below. The visual grammar every scene is drawn in is `components/flow/grammar.ts`.
@@ -70,7 +70,7 @@ export interface Flow {
    *  redirects there. */
   slug: string
   /** The flowverse module it is released in, which is where its versions, repository and
-   *  licence are read from at build time. Absent for a flow that ships inside humanize. */
+   *  licence are read from at build time. Absent for `chat` alone, which is in humanize. */
   module?: string
   /** The page under /flows/. Every flow has one of its own. */
   link: string
@@ -109,6 +109,7 @@ export const FLOWS: Flow[] = [
   {
     name: 'ralph_loop',
     slug: 'ralph-loop',
+    module: 'ralph_loop',
     link: '/flows/ralph-loop',
     roles: 'agent',
     said: 'The task again every round, in a fresh session, so only the repository carries over.',
@@ -121,6 +122,7 @@ export const FLOWS: Flow[] = [
   {
     name: 'stateful_ralph',
     slug: 'stateful-ralph',
+    module: 'stateful_ralph',
     link: '/flows/stateful-ralph',
     roles: 'agent',
     said: 'The task again every round, in one session that remembers every round before.',
@@ -133,6 +135,7 @@ export const FLOWS: Flow[] = [
   {
     name: 'continue_loop',
     slug: 'continue-loop',
+    module: 'continue_loop',
     link: '/flows/continue-loop',
     roles: 'agent',
     said: 'The task once, then “continue” to the same session, round after round.',
@@ -145,6 +148,7 @@ export const FLOWS: Flow[] = [
   {
     name: 'goal',
     slug: 'goal',
+    module: 'goal',
     link: '/flows/goal',
     roles: 'worker',
     said: 'The task set as the agent’s own /goal: the model keeps going until it says the goal is met.',
@@ -157,6 +161,7 @@ export const FLOWS: Flow[] = [
   {
     name: 'flame_chase',
     slug: 'flame-chase',
+    module: 'flame_chase',
     link: '/flows/flame-chase',
     roles: 'first_chaser · second_chaser',
     said: 'Two agents take turns on the same task, each in a fresh session, passing only the tree.',
@@ -211,6 +216,7 @@ export const FLOWS: Flow[] = [
   {
     name: 'rlar',
     slug: 'rlar',
+    module: 'rlar',
     link: '/flows/rlar',
     roles: 'actor · reviewer',
     said: 'An actor works in one session; a fresh reviewer reads the work and writes its next prompt.',

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// Where a flow comes from and how to get it, under its title: built into humanize, or released
-// in the flowverse -- and then which version, from which repository, pinned to which commit,
+// Where a flow comes from and how to get it, under its title: in humanize itself, which is
+// `chat` alone, or released in the flowverse -- and then which version, from which repository, pinned to which commit,
 // under which licence, needing what. Every fact about a release is read from the flowverse at
 // build time (`flowverse.data.mts`), never written on the page, so a new release shows up here
 // on the next build without anybody editing a page.
@@ -43,10 +43,8 @@ const day = (iso: string) => iso.slice(0, 10)
     <template v-if="builtin">
       <div class="badge"><span class="sq" />ships with Humanize</div>
       <p class="how">
-        Nothing to install: it is in <code>hmz</code> from the first run, with
-        <code>chat</code> and the other loops, and its code is
-        <a :href="`https://github.com/humanfia/humanize/tree/main/src/hmz/flows/builtin/${flow}`">Humanize's
-          <code>flows/builtin/{{ flow }}</code></a>.
+        Nothing to install: it is in <code>hmz</code> from the first run, and is all there is
+        to run until a flow is installed.
       </p>
     </template>
 
