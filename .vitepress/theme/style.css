@@ -463,3 +463,30 @@ a.card:hover {
 ::selection {
   background: color-mix(in srgb, var(--hf-pink) 30%, transparent);
 }
+
+/* ---------------------------------------------------------------------------------------
+   One site, more than one build. Humanize's page and documentation are built by its own
+   repository and served at /humanize/ (../other-sites.ts), so a link there is a page load
+   rather than a route change. The browser is asked to treat it as a change of page all the
+   same: it holds the old page until the new one has drawn, then cross-fades the two, and the
+   nav -- the same bar in both builds -- is named, so it is carried across as one object and
+   does not fade at all. Humanize's theme has the same block.
+   --------------------------------------------------------------------------------------- */
+
+@view-transition {
+  navigation: auto;
+}
+
+.VPNav {
+  view-transition-name: hf-nav;
+}
+
+::view-transition-group(root) {
+  animation-duration: 0.16s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}

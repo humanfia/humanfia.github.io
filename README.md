@@ -89,6 +89,17 @@ Things to know:
   `/humanize/user/first-run`, like any link here. `.vitepress/other-sites.ts` lists those
   sites: the build leaves links to them out of its dead-link check, the theme has the browser
   load them instead of the router, and `pnpm check:docs` fetches every one.
+- **One bar, one footer.** The nav's links, the social link and the footer's lines are the
+  `NAV`, `SOCIAL_LINKS` and `FOOTER` constants in `.vitepress/config.mts`, and every build
+  writes them to [humanfia.ai/chrome.json](https://humanfia.ai/chrome.json). Humanize's site
+  reads that file when it is built and draws the same bar and footer, with its own copy of
+  `Wordmark.vue` and of the chrome's rules in `theme/style.css`; a change to either of those
+  is made in `humanfia/humanize`'s `docs/.vitepress/theme/humanfia/` too. A change to the nav
+  reaches Humanize's site the next time that site is built.
+- **No flash between builds.** Going to another repository's site is a page load. Both themes
+  ask the browser to cross-fade it and to carry the nav across unchanged (`@view-transition`
+  in `theme/style.css`), and to draw the other build's page ahead of the click
+  (the `speculationrules` script in `head`).
 - **Same origin.** Those sites share this one's cookies and localStorage, and each builds its
   own header and footer.
 - **Renaming this repository, or changing `public/CNAME`, moves every one of those sites.**

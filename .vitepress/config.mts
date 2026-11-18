@@ -49,6 +49,53 @@ const SECTIONS = {
 } as const
 type Section = keyof typeof SECTIONS
 
+// The chrome: what is around every page rather than on it -- the nav's links, the social link
+// and the footer's lines. It is a constant because it has two readers. The theme below draws it
+// here; and `buildEnd` writes it out as /chrome.json, links made absolute, for the sites the
+// other repositories publish under this domain (./other-sites.ts). Humanize's build reads that
+// file and draws the same bar and the same footer, so a reader crossing from one build to the
+// other sees the page change and nothing round it.
+//
+// Projects is a menu; the rest are plain links. There is no Research menu: Flow Science is a
+// post on the blog, and how Humanize works inside is its own documentation's to say. Flows
+// is a plain link too: the way to a flow is the catalogue at /flows/, which shows every flow
+// at once, drawn, where a menu could only list their names. There is no projects index any more: a page whose whole job
+// was to list six links, when a menu lists the same six without costing a page load, and
+// every one of those pages opens with the sentence the index was paraphrasing. The way in
+// is now the project itself.
+//
+// Documentation is still not in here. It lives with the project it documents, and the way
+// to it is that project's page -- a Docs menu was a second table of contents for a site
+// this one does not own, and it went stale the moment that site moved a page.
+const NAV = [
+  { text: 'Projects', items: PROJECT_LINKS, activeMatch: '^/(?:flowbench|hoa|kda|hma)/' },
+  { text: 'Flows', link: '/flows/', activeMatch: '/flows/' },
+  { text: 'Blog', link: '/blog/', activeMatch: '/blog/' },
+  { text: 'News', link: '/news/', activeMatch: '/news/' },
+  { text: 'About', link: '/about/', activeMatch: '/about/' },
+]
+
+const SOCIAL_LINKS = [{ icon: 'github', link: 'https://github.com/humanfia' }]
+
+const FOOTER = {
+  message:
+    'Open source on <a href="https://github.com/humanfia">github.com/humanfia</a> · RSS: <a href="/blog/feed.rss">blog</a> · <a href="/news/feed.rss">news</a>',
+  // The name is the wordmark drawn over these two lines (theme/components/SiteFooter.vue).
+  copyright: 'Copyright © 2026',
+}
+
+/** A page of another build, loaded in the background once a pointer rests on a link to it, so
+ *  the click that follows swaps to a page that is already drawn. A browser that does not know
+ *  speculation rules ignores the script. */
+const PRERENDER_OTHER_SITES = JSON.stringify({
+  prerender: [
+    {
+      where: { or: OTHER_SITES.flatMap((site) => [{ href_matches: `/${site}` }, { href_matches: `/${site}/*` }]) },
+      eagerness: 'moderate',
+    },
+  ],
+})
+
 export default defineConfig({
   title: 'Humanfia',
   titleTemplate: ':title · Humanfia',
@@ -107,6 +154,7 @@ export default defineConfig({
     // One alternate per feed, so a reader pointed at any page here is offered both.
     ['link', { rel: 'alternate', type: 'application/rss+xml', title: SECTIONS.blog.feed, href: `${HOSTNAME}/blog/feed.rss` }],
     ['link', { rel: 'alternate', type: 'application/rss+xml', title: SECTIONS.news.feed, href: `${HOSTNAME}/news/feed.rss` }],
+    ['script', { type: 'speculationrules' }, PRERENDER_OTHER_SITES],
     [
       'script',
       { type: 'application/ld+json' },
@@ -131,24 +179,8 @@ export default defineConfig({
     // would have the theme print the site's title as text beside it.
     siteTitle: false,
 
-    // Projects is a menu; the rest are plain links. There is no Research menu: Flow Science is a
-    // post on the blog, and how Humanize works inside is its own documentation's to say. Flows
-    // is a plain link too: the way to a flow is the catalogue at /flows/, which shows every flow
-    // at once, drawn, where a menu could only list their names. There is no projects index any more: a page whose whole job
-    // was to list six links, when a menu lists the same six without costing a page load, and
-    // every one of those pages opens with the sentence the index was paraphrasing. The way in
-    // is now the project itself.
-    //
-    // Documentation is still not in here. It lives with the project it documents, and the way
-    // to it is that project's page -- a Docs menu was a second table of contents for a site
-    // this one does not own, and it went stale the moment that site moved a page.
-    nav: [
-      { text: 'Projects', items: PROJECT_LINKS, activeMatch: '^/(?:flowbench|hoa|kda|hma)/' },
-      { text: 'Flows', link: '/flows/', activeMatch: '/flows/' },
-      { text: 'Blog', link: '/blog/', activeMatch: '/blog/' },
-      { text: 'News', link: '/news/', activeMatch: '/news/' },
-      { text: 'About', link: '/about/', activeMatch: '/about/' },
-    ],
+    // The nav, the social link and the footer are the chrome, above.
+    nav: NAV,
 
     // No section has a sidebar. About is a single page: a list of one is furniture, not
     // navigation. The blog and news indexes are already the whole list (PostMosaic.vue,
@@ -157,7 +189,7 @@ export default defineConfig({
     // Each project page is drawn full width, and the nav's menu is the way between them.
     sidebar: {},
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/humanfia' }],
+    socialLinks: SOCIAL_LINKS,
 
     editLink: {
       pattern: 'https://github.com/humanfia/humanfia.github.io/edit/main/:path',
@@ -168,15 +200,11 @@ export default defineConfig({
 
     outline: { level: [2, 3] },
 
-    footer: {
-      message:
-        'Open source on <a href="https://github.com/humanfia">github.com/humanfia</a> · RSS: <a href="/blog/feed.rss">blog</a> · <a href="/news/feed.rss">news</a>',
-      // The name is the wordmark drawn over these two lines (theme/components/SiteFooter.vue).
-      copyright: 'Copyright © 2026',
-    },
+    footer: FOOTER,
   },
 
-  // One RSS feed per section, written straight into the built site. Hand-rolled rather than
+  // The chrome for the other builds (above), and one RSS feed per section, written straight into
+  // the built site. Hand-rolled rather than
   // pulled from a package: a feed is a dozen lines of XML, and this way the build has one
   // dependency rather than two.
   async buildEnd(config: SiteConfig) {
@@ -184,8 +212,25 @@ export default defineConfig({
       const posts = await createContentLoader(`${section}/*.md`, { excerpt: false }).load()
       writeFileSync(resolve(config.outDir, `${section}/feed.rss`), feedOf(section, posts))
     }
+    writeFileSync(resolve(config.outDir, 'chrome.json'), `${JSON.stringify(chrome(), null, 2)}\n`)
   },
 })
+
+/** The chrome as another build can use it: every path of this site as a full URL, since a path
+ *  written from `/` means something else under that build's own base. */
+function chrome() {
+  const absolute = (link: string) => (link.startsWith('/') ? `${HOSTNAME}${link}` : link)
+  return {
+    origin: HOSTNAME,
+    nav: NAV.map((entry) =>
+      'items' in entry
+        ? { text: entry.text, items: entry.items.map(({ text, link }) => ({ text, link: absolute(link) })) }
+        : { text: entry.text, link: absolute(entry.link) },
+    ),
+    socialLinks: SOCIAL_LINKS,
+    footer: { ...FOOTER, message: FOOTER.message.replace(/href="\//g, `href="${HOSTNAME}/`) },
+  }
+}
 
 function feedOf(section: Section, posts: ContentData[]) {
   const items = posts
